@@ -1,0 +1,12 @@
+<?php
+
+
+class Error_code{
+
+    const USERNAME_CANNOT_NULL=001;
+    const PASSWORD_CANNOT_NULL=002;
+    const USERNAME_ALREADY_EXIT=003;
+    const REGISTER_FAIL=004;
+    const LOGIN_FAIL=005;
+    const USERNAME_OR_PASSWORD_FAIL=006;
+}
