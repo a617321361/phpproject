@@ -31,7 +31,7 @@ class  User{
         }
         $time = date('Y-m-d H:i:s',time());//获取当前时间
         $password = $this->_md5($password);
-        $sql = "INSERT INTO `users` (`username`, `password`, `creat_time`) VALUES ('$username', '$password','$time')";
+        $sql = "INSERT INTO `user` (`username`, `password`, `creat_time`) VALUES ('$username', '$password','$time')";
         
         $sm = $this->_db->prepare($sql);
         
@@ -64,7 +64,7 @@ class  User{
             throw new Exception('用户密码不能为空', Error_code::PASSWORD_CANNOT_NULL);
         }
         $password = $this->_md5($password);
-       $sql = "SELECT * FROM `users` WHERE `username` = '$username' AND `password` = '$password'";
+       $sql = "SELECT * FROM `user` WHERE `username` = '$username' AND `password` = '$password'";
 
        $sm = $this->_db->prepare($sql);
 
@@ -98,7 +98,7 @@ class  User{
      */
     private function isUsernameExit($username){
 
-        $sql = "SELECT * FROM users WHERE username = '$username'";//查询语句
+        $sql = "SELECT * FROM user WHERE username = '$username'";//查询语句
         //预处理
         $sm = $this->_db->prepare($sql);
         //执行

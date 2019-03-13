@@ -9,7 +9,7 @@ header('Access-Control-Allow-Origin:*');
 
 try{
     //pdo连接mysql
-    $pdo = new PDO("mysql:host=".HOST.";dbname=".DBNAME,"root","xNEOm7VvPC5VUrm9");
+    $pdo = new PDO("mysql:host=".HOST.";dbname=".DBNAME,"root","wf7AbzQwsW1iOYAp");
     $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);//PDO::ERRMODE_WARNING==>1(异常捕获报警模式)
     $pdo->query('set names utf8');
     return $pdo;

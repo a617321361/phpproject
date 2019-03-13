@@ -7,7 +7,7 @@ require_once __DIR__.'/class/users.php';
 require_once __DIR__.'/class/Rest.php';
 
 $user = new User($pdo);
-$rest = new Rest($pdo);
+$rest = new Rest($user);
 $rest->Run();
 
 // //  $user->register('admin','admin');
